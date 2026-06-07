@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ASSETS } from "@/lib/assets";
 
 type DropdownItem = { label: string; href: string };
 type NavLink = {
@@ -59,7 +60,7 @@ export default function Navbar() {
           {/* Logo + Brand */}
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src="/logo.jpg"
+              src={ASSETS.logo}
               alt="Logo Hoàng Việt"
               width={56}
               height={56}

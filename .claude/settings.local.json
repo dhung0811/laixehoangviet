@@ -17,7 +17,8 @@
       "Bash(cd /mnt/d/abcxyz/laixehoangviet && npm install cloudinary dotenv --save-dev 2>&1 | tail -5)",
       "Read(//mnt/d/abcxyz/**)",
       "PowerShell(Get-Command node, npm -ErrorAction SilentlyContinue)",
-      "Bash(mkdir -p /mnt/d/abcxyz/laixehoangviet/scripts 2>/dev/null; echo \"ok\")"
+      "Bash(mkdir -p /mnt/d/abcxyz/laixehoangviet/scripts 2>/dev/null; echo \"ok\")",
+      "PowerShell(Copy-Item 'd:\\\\abcxyz\\\\laixehoangviet\\\\logo.jpg' 'd:\\\\abcxyz\\\\laixehoangviet\\\\app\\\\icon.jpg')"
     ],
     "additionalDirectories": [
       "\\mnt\\d\\abcxyz\\laixehoangviet"

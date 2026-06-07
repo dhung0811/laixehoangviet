@@ -13,7 +13,7 @@ export const ASSETS = {
   boTuc:             `${CDN}/v1780839712/hoang-viet/botuc.jpg`,
 
   // Logo
-  logo:              `${CDN}/v1780839726/hoang-viet/logo.jpg`,
+  logo:              `${CDN}/v1780841121/logo_lydtft.jpg`,
 
   // Gallery — ảnh thực tế (thucte/)
   thucte: [

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ASSETS } from "@/lib/assets";
 
 const courseLinks = [
   { label: "Hạng B tự động (B1)", href: "#courses" },
@@ -29,7 +30,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-5">
               <Image
-                src="/logo.jpg"
+                src={ASSETS.logo}
                 alt="Logo Hoàng Việt"
                 width={64}
                 height={64}

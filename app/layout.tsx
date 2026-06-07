@@ -20,6 +20,10 @@ export const metadata: Metadata = {
   description:
     "Trung tâm Đào tạo Lái xe Hoàng Việt tại Lâm Đồng. Đào tạo bằng lái B tự động, B số sàn, C1 và bổ túc tay lái. Tỷ lệ đậu 90%. Hotline: 0986.219.113",
   keywords: "học lái xe Lâm Đồng, bằng lái xe B, C1, Hoàng Việt, trung tâm lái xe",
+  icons: {
+    icon: "https://res.cloudinary.com/dsun7efy3/image/upload/f_auto,q_auto/v1780841121/logo_lydtft.jpg",
+    apple: "https://res.cloudinary.com/dsun7efy3/image/upload/f_auto,q_auto/v1780841121/logo_lydtft.jpg",
+  },
   openGraph: {
     title: "Trung tâm Đào tạo Lái xe Hoàng Việt",
     description: "Vững tay lái – Sáng tương lai. Đào tạo lái xe uy tín tại Lâm Đồng.",
