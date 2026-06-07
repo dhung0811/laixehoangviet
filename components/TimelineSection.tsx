@@ -10,7 +10,7 @@ const slides = [
     subtitle: "Holistic Driver Education",
     description:
       "Kết hợp kiến thức pháp luật, kỹ năng điều khiển phương tiện và kỹ năng mềm như quan sát, xử lý tình huống, giữ bình tĩnh; giúp học viên lái xe an toàn, tự tin và có trách nhiệm.",
-    image: ASSETS.galleryTopRight1,
+    image: ASSETS.thucte[0],
   },
   {
     number: "02",
@@ -18,7 +18,7 @@ const slides = [
     subtitle: "Learner-Centered Education",
     description:
       "Thấu hiểu năng lực tiếp thu, tâm lý và kinh nghiệm lái xe của từng học viên; từ đó xây dựng cách hướng dẫn phù hợp, giúp người học từng bước tiến bộ, tự tin và làm chủ tay lái.",
-    image: ASSETS.galleryBottomRight,
+    image: ASSETS.thucte[2],
   },
   {
     number: "03",
@@ -26,7 +26,7 @@ const slides = [
     subtitle: "Experiential Learning",
     description:
       "Gắn lý thuyết với thực hành sân tập, đường trường và tình huống giao thông thực tế; giúp học viên biết vận dụng kiến thức, kỹ năng vào quá trình lái xe an toàn hằng ngày.",
-    image: ASSETS.galleryBig,
+    image: ASSETS.thucte[4],
   },
 ];
 

@@ -8,7 +8,7 @@ const courses = [
     price: "24.000.000 đ",
     badge: "Phổ biến",
     description: "Dành cho lái xe gia đình, du lịch. Dễ học, xe đời mới 2024.",
-    image: ASSETS.galleryTopRight1,
+    image: ASSETS.hangB,
     highlights: ["710 km đường trường", "11 bài sa hình", "168h lý thuyết"],
   },
   {
@@ -17,7 +17,7 @@ const courses = [
     price: "22.000.000 đ",
     badge: null,
     description: "Dành cho người muốn lái xe cá nhân, xe dịch vụ, linh hoạt hơn số tự động.",
-    image: ASSETS.galleryBottomRight,
+    image: ASSETS.hangB,
     highlights: ["810 km đường trường", "11 bài sa hình", "168h lý thuyết"],
   },
   {
@@ -26,7 +26,7 @@ const courses = [
     price: "25.000.000 đ",
     badge: "Phổ biến",
     description: "Lái xe tải từ 3.5 – 7.5 tấn. Cơ hội nghề nghiệp mở rộng.",
-    image: ASSETS.galleryBig,
+    image: ASSETS.hangC,
     highlights: ["850 km đường trường", "11 bài sa hình", "168h lý thuyết"],
   },
   {
@@ -35,7 +35,7 @@ const courses = [
     price: "350.000đ / giờ",
     badge: null,
     description: "Dành cho người đã có bằng nhưng chưa tự tin cầm lái một mình.",
-    image: ASSETS.galleryTopRight2,
+    image: ASSETS.boTuc,
     highlights: ["Lịch linh hoạt", "1 kèm 1 tận tâm", "Từ 1 giờ trở lên"],
   },
 ];

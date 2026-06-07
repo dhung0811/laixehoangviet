@@ -13,7 +13,14 @@
       "PowerShell(Copy-Item \"d:\\\\abcxyz\\\\laixehoangviet\\\\logo.jpg\" \"d:\\\\abcxyz\\\\laixehoangviet\\\\public\\\\logo.jpg\")",
       "PowerShell(\"done\")",
       "Bash(Copy-Item -Path 'd:\\\\abcxyz\\\\laixehoangviet\\\\hero' -Destination 'd:\\\\abcxyz\\\\laixehoangviet\\\\public\\\\hero' -Recurse)",
-      "PowerShell(Copy-Item -Path 'd:\\\\abcxyz\\\\laixehoangviet\\\\hero' -Destination 'd:\\\\abcxyz\\\\laixehoangviet\\\\public\\\\hero' -Recurse)"
+      "PowerShell(Copy-Item -Path 'd:\\\\abcxyz\\\\laixehoangviet\\\\hero' -Destination 'd:\\\\abcxyz\\\\laixehoangviet\\\\public\\\\hero' -Recurse)",
+      "Bash(cd /mnt/d/abcxyz/laixehoangviet && npm install cloudinary dotenv --save-dev 2>&1 | tail -5)",
+      "Read(//mnt/d/abcxyz/**)",
+      "PowerShell(Get-Command node, npm -ErrorAction SilentlyContinue)",
+      "Bash(mkdir -p /mnt/d/abcxyz/laixehoangviet/scripts 2>/dev/null; echo \"ok\")"
+    ],
+    "additionalDirectories": [
+      "\\mnt\\d\\abcxyz\\laixehoangviet"
     ]
   }
 }

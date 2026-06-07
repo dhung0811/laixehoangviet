@@ -23,7 +23,7 @@ const cards = [
   {
     id: "vision",
     title: "Tầm nhìn",
-    bg: "/tamnhin.jpg",
+    bg: "https://res.cloudinary.com/dsun7efy3/image/upload/f_auto,q_auto/v1780839727/hoang-viet/tamnhin.jpg",
     Icon: VisionIcon,
     highlight: null as string | null,
     description:
@@ -78,7 +78,7 @@ export default function ValuesSection() {
                   <img
                     src={card.bg}
                     alt={card.title}
-                    className="absolute inset-0 w-[125%] h-full object-cover -left-[12.5%]"
+                    className="absolute inset-0 w-full h-full object-cover object-center"
                   />
                   <div className="absolute inset-0 bg-[rgba(0,23,54,0.70)]" />
                   <div className="absolute inset-0 flex flex-col items-center justify-center gap-6 px-8 text-center">
@@ -96,7 +96,7 @@ export default function ValuesSection() {
                 >
                   {/* Faint bg image for depth */}
                   <div className="absolute inset-0 opacity-[0.08]">
-                    <img src={card.bg} alt="" className="w-full h-full object-cover" />
+                    <img src={card.bg} alt="" className="w-full h-full object-cover object-center" />
                   </div>
                   <div className="relative z-10 flex flex-col items-center gap-5">
                     <div className="w-16 h-16 rounded-full bg-white/10 border border-gold/30 flex items-center justify-center text-gold shadow-lg">

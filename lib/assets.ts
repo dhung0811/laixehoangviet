@@ -1,16 +1,28 @@
-// Figma MCP assets — valid for 7 days from 2026-06-07
-// Replace with permanent URLs after download
+// Cloudinary CDN — cloud: dsun7efy3 | folder: hoang-viet
+const CDN = "https://res.cloudinary.com/dsun7efy3/image/upload/f_auto,q_auto";
+
 export const ASSETS = {
-  heroBg: "https://www.figma.com/api/mcp/asset/8ae0c86b-7ba0-4713-b135-091469b4c538",
-  heroArrow: "https://www.figma.com/api/mcp/asset/f6f43e0b-c566-45a9-952f-69ae19050040",
-  visionBg: "https://www.figma.com/api/mcp/asset/5591da35-246e-432a-bd98-38c0ef234da0",
-  missionBg: "https://www.figma.com/api/mcp/asset/4d0b2a28-dd5d-4db8-acae-b52739616e80",
-  coreValuesBg: "https://www.figma.com/api/mcp/asset/33ba7951-a127-47e7-be33-84e24705fe47",
-  visionIcon: "https://www.figma.com/api/mcp/asset/d81d05f7-bdbd-4698-8022-572c6d02ff93",
-  missionIcon: "https://www.figma.com/api/mcp/asset/d3ec076d-c6d9-4076-906e-f37da2315686",
-  coreValuesIcon: "https://www.figma.com/api/mcp/asset/5b396d66-a01e-4fcf-950c-63080412f19c",
-  galleryBig: "https://www.figma.com/api/mcp/asset/a1908cd6-2e89-42d7-899d-25e984038a0f",
-  galleryTopRight1: "https://www.figma.com/api/mcp/asset/3b05daf2-a338-4663-8da7-69e43b6f142f",
-  galleryTopRight2: "https://www.figma.com/api/mcp/asset/b50dff9d-743e-4c4b-8ea6-7e6918e2d23f",
-  galleryBottomRight: "https://www.figma.com/api/mcp/asset/d666be91-51eb-474b-97ac-c0cd936a495e",
+  // Values section backgrounds (Figma originals)
+  visionBg:          `${CDN}/v1780839740/hoang-viet/vision-bg.png`,
+  missionBg:         `${CDN}/v1780839741/hoang-viet/mission-bg.png`,
+  coreValuesBg:      `${CDN}/v1780839742/hoang-viet/core-values-bg.png`,
+
+  // Course card images
+  hangB:             `${CDN}/v1780839715/hoang-viet/hero/hero2.jpg`,
+  hangC:             `${CDN}/v1780839713/hoang-viet/hangc.jpg`,
+  boTuc:             `${CDN}/v1780839712/hoang-viet/botuc.jpg`,
+
+  // Logo
+  logo:              `${CDN}/v1780839726/hoang-viet/logo.jpg`,
+
+  // Gallery — ảnh thực tế (thucte/)
+  thucte: [
+    `${CDN}/v1780839728/hoang-viet/thucte/z7911125514385_7a19a67bf287a52b6c944096d592a74c.jpg`,
+    `${CDN}/v1780839729/hoang-viet/thucte/z7911125518814_cccb334c1129d137cdc18d17a33b6378.jpg`,
+    `${CDN}/v1780839731/hoang-viet/thucte/z7911125529689_470af83a74a7346dceecc5daf8ce536d.jpg`,
+    `${CDN}/v1780839732/hoang-viet/thucte/z7911125551654_d5125bd4373e9f2639757b1c983bffde.jpg`,
+    `${CDN}/v1780839734/hoang-viet/thucte/z7911144990726_75f10da089027c83f7a96f6f3973e652.jpg`,
+    `${CDN}/v1780839737/hoang-viet/thucte/z7911145117965_e8153163fbbcef4f56ad0c5eb4d3869a.jpg`,
+    `${CDN}/v1780839739/hoang-viet/thucte/z7911146489107_5931fa7b23cfa49c65dee51fc5360a55.jpg`,
+  ],
 };

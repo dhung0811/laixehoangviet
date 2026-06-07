@@ -1,28 +1,29 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const slides = [
-  { src: "/hero/hero1.jpg", alt: "Trung tâm Đào tạo Lái xe Hoàng Việt" },
-  { src: "/hero/hero2.jpg", alt: "Hoàng Việt – lớp học lý thuyết" },
-  { src: "/hero/hero3.jpg", alt: "Hoàng Việt – thực hành sa hình" },
-  { src: "/hero/hero4.jpg", alt: "Hoàng Việt – đội xe tập lái" },
-  { src: "/hero/hero5.jpg", alt: "Hoàng Việt – sân lái xe" },
-  { src: "/hero/hero6.jpg", alt: "Hoàng Việt – sa hình" },
-  { src: "/hero/hero7.jpg", alt: "Hoàng Việt – sân lái xe1"},
+  { src: "https://res.cloudinary.com/dsun7efy3/image/upload/f_auto,q_auto/v1780839715/hoang-viet/hero/hero1.jpg", alt: "Hoàng Việt – slide 1" },
+  { src: "https://res.cloudinary.com/dsun7efy3/image/upload/f_auto,q_auto/v1780839717/hoang-viet/hero/hero2.jpg", alt: "Hoàng Việt – slide 2" },
+  { src: "https://res.cloudinary.com/dsun7efy3/image/upload/f_auto,q_auto/v1780839719/hoang-viet/hero/hero3.jpg", alt: "Hoàng Việt – slide 3" },
+  { src: "https://res.cloudinary.com/dsun7efy3/image/upload/f_auto,q_auto/v1780839721/hoang-viet/hero/hero4.jpg", alt: "Hoàng Việt – slide 4" },
+  { src: "https://res.cloudinary.com/dsun7efy3/image/upload/f_auto,q_auto/v1780839723/hoang-viet/hero/hero5.jpg", alt: "Hoàng Việt – slide 5" },
+  { src: "https://res.cloudinary.com/dsun7efy3/image/upload/f_auto,q_auto/v1780839724/hoang-viet/hero/hero6.jpg", alt: "Hoàng Việt – slide 6" },
+  { src: "https://res.cloudinary.com/dsun7efy3/image/upload/f_auto,q_auto/v1780839725/hoang-viet/hero/hero7.jpg", alt: "Hoàng Việt – slide 7" },
 ];
 
 export default function HeroSection() {
   const [idx, setIdx] = useState(0);
-  const [paused, setPaused] = useState(false);
+  const pausedRef = useRef(false);
 
   useEffect(() => {
-    if (paused) return;
     const timer = setInterval(() => {
-      setIdx((prev) => (prev + 1) % slides.length);
+      if (!pausedRef.current) {
+        setIdx((prev) => (prev + 1) % slides.length);
+      }
     }, 5000);
     return () => clearInterval(timer);
-  }, [paused]);
+  }, []);
 
   const prev = () => setIdx((p) => (p - 1 + slides.length) % slides.length);
   const next = () => setIdx((p) => (p + 1) % slides.length);
@@ -31,8 +32,8 @@ export default function HeroSection() {
     <section
       className="relative h-[600px] flex items-center overflow-hidden"
       id="hero"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
+      onMouseEnter={() => { pausedRef.current = true; }}
+      onMouseLeave={() => { pausedRef.current = false; }}
     >
       {/* Slide images — fade between them */}
       {slides.map((slide, i) => (
