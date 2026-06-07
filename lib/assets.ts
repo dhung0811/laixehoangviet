@@ -15,6 +15,9 @@ export const ASSETS = {
   // Logo
   logo:              `${CDN}/v1780841121/logo_lydtft.jpg`,
 
+  // thongtin
+  toanDien:           `${CDN}/v1780842927/toandien_ik6q9q.jpg`,
+
   // Gallery — ảnh thực tế (thucte/)
   thucte: [
     `${CDN}/v1780839728/hoang-viet/thucte/z7911125514385_7a19a67bf287a52b6c944096d592a74c.jpg`,

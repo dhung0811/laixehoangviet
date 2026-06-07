@@ -10,7 +10,7 @@ const slides = [
     subtitle: "Holistic Driver Education",
     description:
       "Kết hợp kiến thức pháp luật, kỹ năng điều khiển phương tiện và kỹ năng mềm như quan sát, xử lý tình huống, giữ bình tĩnh; giúp học viên lái xe an toàn, tự tin và có trách nhiệm.",
-    image: ASSETS.thucte[0],
+    image: ASSETS.toanDien,
   },
   {
     number: "02",
