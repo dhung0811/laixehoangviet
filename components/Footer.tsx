@@ -2,10 +2,10 @@ import Image from "next/image";
 import { ASSETS } from "@/lib/assets";
 
 const courseLinks = [
-  { label: "Hạng B tự động (B1)", href: "#courses" },
-  { label: "Hạng B số sàn (B2)", href: "#courses" },
-  { label: "Hạng C1 – Xe tải", href: "#courses" },
-  { label: "Bổ túc tay lái cá nhân", href: "#courses" },
+  { label: "Hạng B tự động (B1)", href: "/khoa-hoc/hang-b-tu-dong" },
+  { label: "Hạng B số sàn (B2)", href: "khoa-hoc/hang-b-so-san" },
+  { label: "Hạng C1 – Xe tải", href: "/khoa-hoc/hang-c1" },
+  { label: "Bổ túc tay lái cá nhân", href: "/khoa-hoc/bo-tuc" },
 ];
 
 const offices = [
