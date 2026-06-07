@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__claude_ai_Figma__get_metadata",
+      "mcp__claude_ai_Figma__whoami",
+      "mcp__claude_ai_Figma__get_design_context",
+      "Bash(npm install *)",
+      "PowerShell(Get-Command node, npm, npx -ErrorAction SilentlyContinue)",
+      "PowerShell($env:PATH -split \";\" | Where-Object { $_ -match \"node|npm\" })",
+      "Bash(mkdir -p \"/mnt/d/abcxyz/laixehoangviet/public\")",
+      "Bash(cp \"/mnt/d/abcxyz/laixehoangviet/logo.jpg\" \"/mnt/d/abcxyz/laixehoangviet/public/logo.jpg\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"d:\\\\abcxyz\\\\laixehoangviet\\\\public\")",
+      "PowerShell(Copy-Item \"d:\\\\abcxyz\\\\laixehoangviet\\\\logo.jpg\" \"d:\\\\abcxyz\\\\laixehoangviet\\\\public\\\\logo.jpg\")",
+      "PowerShell(\"done\")"
+    ]
+  }
+}
