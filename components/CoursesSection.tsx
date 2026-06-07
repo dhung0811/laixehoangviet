@@ -1,8 +1,9 @@
+import Link from "next/link";
 import { ASSETS } from "@/lib/assets";
 
 const courses = [
   {
-    id: "b-auto",
+    id: "hang-b-tu-dong",
     name: "Hạng B tự động (B1)",
     price: "24.000.000 đ",
     badge: null,
@@ -11,7 +12,7 @@ const courses = [
     highlights: ["710 km đường trường", "11 bài sa hình", "168h lý thuyết"],
   },
   {
-    id: "b-manual",
+    id: "hang-b-so-san",
     name: "Hạng B số sàn (B2)",
     price: "22.000.000 đ",
     badge: "Phổ biến",
@@ -20,7 +21,7 @@ const courses = [
     highlights: ["810 km đường trường", "11 bài sa hình", "168h lý thuyết"],
   },
   {
-    id: "c1",
+    id: "hang-c1",
     name: "Hạng C1",
     price: "25.000.000 đ",
     badge: null,
@@ -29,7 +30,7 @@ const courses = [
     highlights: ["850 km đường trường", "11 bài sa hình", "168h lý thuyết"],
   },
   {
-    id: "botuc",
+    id: "bo-tuc",
     name: "Bổ túc tay lái",
     price: "350.000đ / giờ",
     badge: null,
@@ -49,15 +50,15 @@ export default function CoursesSection() {
             <h2 className="text-primary-mid text-3xl font-bold mb-2">Các Khoá Học</h2>
             <p className="text-gray-500 text-base">Lựa chọn khoá học phù hợp với nhu cầu của bạn</p>
           </div>
-          <a
-            href="#cta"
+          <Link
+            href="/khoa-hoc/hang-b-tu-dong"
             className="flex items-center gap-2 text-primary-mid font-semibold text-sm hover:text-gold transition-colors w-fit"
           >
             Xem tất cả khoá học
             <svg className="w-5 h-3" viewBox="0 0 19 9" fill="none">
               <path d="M0 4.5h17M13 1l5 3.5-5 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
             </svg>
-          </a>
+          </Link>
         </div>
 
         {/* Course cards */}
@@ -65,7 +66,7 @@ export default function CoursesSection() {
           {courses.map((course) => (
             <div
               key={course.id}
-              className="relative border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow group"
+              className="relative border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow group flex flex-col"
             >
               {/* Badge */}
               {course.badge && (
@@ -75,7 +76,7 @@ export default function CoursesSection() {
               )}
 
               {/* Image */}
-              <div className="h-48 overflow-hidden">
+              <div className="h-48 overflow-hidden shrink-0">
                 <img
                   src={course.image}
                   alt={course.name}
@@ -84,7 +85,7 @@ export default function CoursesSection() {
               </div>
 
               {/* Content */}
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-1">
                 <h3 className="text-primary font-bold text-lg mb-2">{course.name}</h3>
                 <p className="text-gray-500 text-sm mb-4 leading-relaxed">{course.description}</p>
 
@@ -100,15 +101,26 @@ export default function CoursesSection() {
                   ))}
                 </ul>
 
-                {/* Price + CTA */}
-                <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                  <span className="text-primary font-bold text-base">{course.price}</span>
-                  <a
-                    href="#cta"
-                    className="bg-primary text-white text-xs font-bold px-4 py-2 rounded-lg hover:bg-primary-mid transition-colors"
+                {/* Price + CTAs */}
+                <div className="mt-auto pt-4 border-t border-gray-100">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-primary font-bold text-base">{course.price}</span>
+                    <Link
+                      href={`/khoa-hoc/${course.id}`}
+                      className="bg-primary text-white text-xs font-bold px-4 py-2 rounded-lg hover:bg-primary-mid transition-colors"
+                    >
+                      Đăng ký
+                    </Link>
+                  </div>
+                  <Link
+                    href={`/khoa-hoc/${course.id}`}
+                    className="flex items-center gap-1.5 text-primary-mid text-xs font-semibold hover:text-gold transition-colors"
                   >
-                    Đăng ký
-                  </a>
+                    Xem chi tiết chương trình
+                    <svg className="w-3 h-2" viewBox="0 0 19 9" fill="none">
+                      <path d="M0 4.5h17M13 1l5 3.5-5 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                    </svg>
+                  </Link>
                 </div>
               </div>
             </div>
