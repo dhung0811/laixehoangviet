@@ -22,6 +22,7 @@ public/**/*.png
 public/**/*.webp
 public/**/*.gif
 public/**/*.svg
+hero/
 
 # debug logs
 npm-debug.log*
