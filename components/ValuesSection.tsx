@@ -23,7 +23,7 @@ const cards = [
   {
     id: "vision",
     title: "Tầm nhìn",
-    bg: ASSETS.visionBg,
+    bg: "/tamnhin.jpg",
     Icon: VisionIcon,
     highlight: null as string | null,
     description:

@@ -11,7 +11,9 @@
       "Bash(cp \"/mnt/d/abcxyz/laixehoangviet/logo.jpg\" \"/mnt/d/abcxyz/laixehoangviet/public/logo.jpg\")",
       "PowerShell(New-Item -ItemType Directory -Force \"d:\\\\abcxyz\\\\laixehoangviet\\\\public\")",
       "PowerShell(Copy-Item \"d:\\\\abcxyz\\\\laixehoangviet\\\\logo.jpg\" \"d:\\\\abcxyz\\\\laixehoangviet\\\\public\\\\logo.jpg\")",
-      "PowerShell(\"done\")"
+      "PowerShell(\"done\")",
+      "Bash(Copy-Item -Path 'd:\\\\abcxyz\\\\laixehoangviet\\\\hero' -Destination 'd:\\\\abcxyz\\\\laixehoangviet\\\\public\\\\hero' -Recurse)",
+      "PowerShell(Copy-Item -Path 'd:\\\\abcxyz\\\\laixehoangviet\\\\hero' -Destination 'd:\\\\abcxyz\\\\laixehoangviet\\\\public\\\\hero' -Recurse)"
     ]
   }
 }
