@@ -5,12 +5,38 @@ import { useState } from "react";
 export default function CTASection() {
   const [phone, setPhone] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!phone.trim()) return;
-    setSubmitted(true);
-    setPhone("");
+    const normalizedPhone = phone.trim();
+
+    if (!normalizedPhone || isSubmitting) return;
+
+    setIsSubmitting(true);
+    setError("");
+
+    try {
+      const response = await fetch("/api/leads", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ phone: normalizedPhone }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Submit failed");
+      }
+
+      setSubmitted(true);
+      setPhone("");
+    } catch {
+      setError("Chưa gửi được thông tin. Vui lòng thử lại hoặc gọi trực tiếp cho chúng tôi.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -38,21 +64,31 @@ export default function CTASection() {
           ) : (
             <form
               onSubmit={handleSubmit}
-              className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto"
+              className="flex flex-col gap-2 w-full lg:w-auto"
             >
-              <input
-                type="tel"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                placeholder="Số điện thoại của bạn"
-                className="flex-1 sm:w-64 bg-white text-primary placeholder-gray-400 px-5 py-3.5 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all"
-              />
-              <button
-                type="submit"
-                className="bg-primary text-white font-bold text-sm px-8 py-3.5 rounded-xl hover:bg-primary-mid transition-colors shrink-0"
-              >
-                Đăng ký ngay
-              </button>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <input
+                  type="tel"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  placeholder="Số điện thoại của bạn"
+                  className="flex-1 sm:w-64 bg-white text-primary placeholder-gray-400 px-5 py-3.5 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all"
+                  disabled={isSubmitting}
+                  required
+                />
+                <button
+                  type="submit"
+                  className="bg-primary text-white font-bold text-sm px-8 py-3.5 rounded-xl hover:bg-primary-mid transition-colors disabled:cursor-not-allowed disabled:opacity-70 shrink-0"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Đang gửi..." : "Đăng ký ngay"}
+                </button>
+              </div>
+              {error ? (
+                <p className="text-sm font-medium text-primary" role="alert">
+                  {error}
+                </p>
+              ) : null}
             </form>
           )}
         </div>
