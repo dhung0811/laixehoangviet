@@ -48,8 +48,17 @@ const courses: Record<string, {
   },
 };
 
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-  const course = courses[params.id];
+type CoursePageProps = {
+  params: Promise<{ id: string }>;
+};
+
+export function generateStaticParams() {
+  return Object.keys(courses).map((id) => ({ id }));
+}
+
+export async function generateMetadata({ params }: CoursePageProps): Promise<Metadata> {
+  const { id } = await params;
+  const course = courses[id];
   if (!course) return { title: "Không tìm thấy khoá học" };
   return {
     title: `${course.title} – Hoàng Việt`,
@@ -57,8 +66,9 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   };
 }
 
-export default function CourseDetailPage({ params }: { params: { id: string } }) {
-  const course = courses[params.id];
+export default async function CourseDetailPage({ params }: CoursePageProps) {
+  const { id } = await params;
+  const course = courses[id];
   if (!course) notFound();
 
   return (
