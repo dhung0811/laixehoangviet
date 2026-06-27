@@ -9,12 +9,16 @@ function doPost(e) {
       throw new Error(`Sheet "${SHEET_NAME}" not found`);
     }
 
-    sheet.appendRow([
+    const nextRow = sheet.getLastRow() + 1;
+    const row = [
       new Date(),
       data.phone || "",
       data.source || "",
       data.submittedAt || "",
-    ]);
+    ];
+
+    sheet.getRange(nextRow, 2).setNumberFormat("@");
+    sheet.getRange(nextRow, 1, 1, row.length).setValues([row]);
 
     return jsonResponse({ ok: true });
   } catch (error) {

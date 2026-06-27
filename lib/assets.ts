@@ -4,8 +4,8 @@ const CDN = "https://res.cloudinary.com/dsun7efy3/image/upload/f_auto,q_auto";
 export const ASSETS = {
   // Values section backgrounds (Figma originals)
   visionBg:          `${CDN}/v1780839740/hoang-viet/vision-bg.png`,
-  missionBg:         `${CDN}/v1780839741/hoang-viet/mission-bg.png`,
-  coreValuesBg:      `${CDN}/v1780839742/hoang-viet/core-values-bg.png`,
+  missionBg:         `${CDN}/v1782535307/sumenh_wyridd.jpg`,
+  coreValuesBg:      `${CDN}/v1782535319/giatri_jrwfl7.jpg`,
 
   // Course card images
   hangB:             `${CDN}/v1780839715/hoang-viet/hero/hero2.jpg`,
@@ -29,3 +29,5 @@ export const ASSETS = {
     `${CDN}/v1780839739/hoang-viet/thucte/z7911146489107_5931fa7b23cfa49c65dee51fc5360a55.jpg`,
   ],
 };
+
+
